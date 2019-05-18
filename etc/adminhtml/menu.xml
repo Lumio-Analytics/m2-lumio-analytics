@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Lumio_Analytics::Lumio" title="lumio" module="Lumio_Analytics" sortOrder="10"
+            resource="Lumio_Analytics::Lumio"/>
+        <add id="Lumio_Analytics::Panel" title="Panel" module="Lumio_Analytics" sortOrder="10"
+            parent="Lumio_Analytics::Lumio"
+            action="lumio/panel"
+            resource="Lumio_Analytics::Panel"/>
+        <add id="Lumio_Analytics::Config" title="Config" module="Lumio_Analytics" sortOrder="10"
+            parent="Lumio_Analytics::Lumio"
+            action="adminhtml/system_config/edit/section/lumio"
+            resource="Lumio_Analytics::Config"/>
+    </menu>
+</config>
